@@ -41,23 +41,23 @@
     }
 
     #left {
-      width: 55%;
+      width: 40%;
       height: 85%;
       float: left;
-      margin-left: 2%;
-      margin-top: 1%;
       position: relative;
     }
 
     #map {
-      width: 50%;
+      top:0%;
+      width: 100%;
       height: 100%;
       position: absolute;
       z-index:-3;
     }
 
     #all {
-      width: 50%;
+      top:0%;
+      width: 100%;
       height: 100%;
       position: absolute;
       animation-name: all;
@@ -66,15 +66,16 @@
       z-index:-2;
     }
 
-    #all img,
-    #k img,
-    #p img,
-    #t img {
-      width: 200px;
+    #all,
+    #k,
+    #p,
+    #t {
       position: absolute;
     }
 
     #k {
+      top:0%;
+      width: 100%;
       animation-name: k;
       animation-duration: 5s;
       animation-fill-mode: forwards;
@@ -82,6 +83,7 @@
     }
 
     #p {
+      top:0%;
       animation-name: p;
       animation-duration: 5s;
       animation-fill-mode: forwards;
@@ -89,6 +91,7 @@
     }
 
     #t {
+      top:0%;
       animation-name: t;
       animation-duration: 5s;
       animation-fill-mode: forwards;
@@ -101,11 +104,11 @@
       }
 
       25% {
-        transform: translate(130px, 0);
+        transform: translate(200px, 0);
       }
 
       100% {
-        transform: translate(130px, 0);
+        transform: translate(0%, 0);
       }
     }
 
@@ -115,11 +118,11 @@
       }
 
       25% {
-        transform: translate(130px, 0);
+        transform: translate(200px, 0);
       }
 
       100% {
-        transform: translate(310px, -160px);
+        transform: translate(300px, -200px);
       }
     }
 
@@ -129,11 +132,11 @@
       }
 
       25% {
-        transform: translate(130px, 0);
+        transform: translate(200px, 0);
       }
 
       100% {
-        transform: translate(310px, 60px);
+        transform: translate(250px, 90px);
       }
     }
 
@@ -143,11 +146,11 @@
       }
 
       25% {
-        transform: translate(130px, 0);
+        transform: translate(200px, 0);
       }
 
       100% {
-        transform: translate(320px, -40px);
+        transform: translate(350px, -20px);
       }
     }
     @keyframes word {
@@ -164,16 +167,17 @@
         text-shadow:1px 1px 1px rgb(73, 73, 73),-1px -1px 1px rgb(255, 255, 255);
       }
     }
-    #picture {
-      float: right;
-      width: 60%;
+    #pictures{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
       height: 100%;
     }
 
     #map img {
-      width: 200px;
       filter: drop-shadow(10px 10px 10px rgb(255, 255, 255));
-    }
+    } 
  td a{
       text-decoration:none;
       animation-name: word;
@@ -186,7 +190,7 @@
   }
     #right {
       float: right;
-      width: 40%;
+      width: 30%;
       height: 85%;
       position:relative;
     }
@@ -208,6 +212,10 @@
     left:120%;
     top:80%;
   }
+}
+#right {
+  float:right;
+  width:50%;
 }
 #right td {
   text-align:center;
@@ -249,28 +257,26 @@
   <div id="main">
     <div id="title">私たちの旅行　ー　台東区</div>
     <div id="left">
-      <div id="map"><img src="images/taiwan.png" /></div>
-      <div id="all"><img src="images/all0.png" /></div>
-      <div id="k"><img src="images/kao.png" /></div>
-      <div id="p"><img src="images/pingtung.png" /></div>
-      <div id="t"><img src="images/tai.png" /></a></div>
-      <div id="picture">
-        <table width="100%" height="100%">
-          <tr>
-            <td width="1"><p><a href="#">タカオ</a></p></td>
-            <td width="60%"></td>
-          </tr>
-          <tr>
-            <td width="1" style="text-align:center"><p><a href="#">タイトン</a></p></td>
-            <td width="1"></td>
-          </tr>
-          <tr>
-            <td width="1"><p><a href="#">へいとう</a></p></td>
-            <td width="1"></td>
-          </tr>
-        </table>
-
-      </div>
+    <table id="pictures">
+      <tr>      
+      <td rowspan="4"><div id="map"><img src="images/taiwan.png"/></div>
+      <div id="all"><img src="images/all0.png"/></div>
+      <div id="k"><img src="images/kao.png"/></div>
+      <div id="p"><img src="images/pingtung.png"/></div>
+      <div id="t"><img src="images/tai.png"/></div>
+      <td width="40%"></td>
+    </td>      
+      </tr>
+      <tr>
+        <td><div style="float:left;margin-left:30%;text-align:center"><a href="#">タカオ</a></div></td>
+      </tr>
+      <tr>
+        <td><div style="float:right;text-align:left"><a href="#">タイトン</a></div></td>
+      </tr>
+      <tr>
+        <td><div style="float:left;margin-left:10%;text-align:center"><a href="#">へいとう</a></div></td>
+      </tr>
+      </table>
     </div>
     <div id="right"> 
        <table width="100%" height="100%">
@@ -297,16 +303,11 @@
 
               </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                  
-                </td>
-              </tr>
        </table>
  
     </div>
-    <div id="moto"><img width="250px"src="images/2.png"/></div>
   </div>
+    <div id="moto"><img width="250px"src="images/2.png"/></div>
   <script src="./css-doodle.min.js"></script>
 </body>
 
