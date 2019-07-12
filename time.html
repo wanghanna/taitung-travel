@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin-top: 0px;
+      margin-left: 0px;
+      background-color: rgba(255, 253, 228);
+      overflow:hidden;
+    }
+
+    #bg {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #main {
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50px;
+      transform: translate(-50%, -50%);
+      border: 2px solid rgba(192, 192, 192, 0.651);
+    }
+
+    #title {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bolder;
+      color: white;
+      margin-top: 20px;
+    }
+
+    #left {
+      width: 55%;
+      height: 85%;
+      float: left;
+      margin-left: 2%;
+      margin-top: 1%;
+      position: relative;
+    }
+
+    #map {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      z-index:-3;
+    }
+
+    #all {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      animation-name: all;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      z-index:-2;
+    }
+
+    #all img,
+    #k img,
+    #p img,
+    #t img {
+      width: 200px;
+      position: absolute;
+    }
+
+    #k {
+      animation-name: k;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      z-index:-1;
+    }
+
+    #p {
+      animation-name: p;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      z-index:-1;
+    }
+
+    #t {
+      animation-name: t;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      z-index:-1;
+    }
+
+    @keyframes all {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(130px, 0);
+      }
+
+      100% {
+        transform: translate(130px, 0);
+      }
+    }
+
+    @keyframes k {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(130px, 0);
+      }
+
+      100% {
+        transform: translate(310px, -160px);
+      }
+    }
+
+    @keyframes p {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(130px, 0);
+      }
+
+      100% {
+        transform: translate(310px, 60px);
+      }
+    }
+
+    @keyframes t {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(130px, 0);
+      }
+
+      100% {
+        transform: translate(320px, -40px);
+      }
+    }
+    @keyframes word {
+      0%{
+        color:rgba(0,0,0,0);
+        text-shadow:0px 0px 0px;
+      }
+      95%{
+        color:rgba(0,0,0,0);
+        text-shadow:0px 0px 0px;
+      }
+      100%{
+        color:rgb(53, 233, 134);
+        text-shadow:1px 1px 1px rgb(73, 73, 73),-1px -1px 1px rgb(255, 255, 255);
+      }
+    }
+    #picture {
+      float: right;
+      width: 60%;
+      height: 100%;
+    }
+
+    #map img {
+      width: 200px;
+      filter: drop-shadow(10px 10px 10px rgb(255, 255, 255));
+    }
+ td a{
+      text-decoration:none;
+      animation-name: word;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+     
+    }
+  td a:hover{
+    color:rgb(255, 255, 255);
+  }
+    #right {
+      float: right;
+      width: 40%;
+      height: 85%;
+      position:relative;
+    }
+#moto {
+  position:absolute;
+  top:0%;
+  left:0%;
+  animation-name: moto;
+  animation-duration:5s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-out;
+}
+@keyframes moto {
+  0%{
+    left:0%;
+    top:80%;
+}
+  100%{
+    left:120%;
+    top:80%;
+  }
+}
+#right td {
+  text-align:center;
+}   
+
+  </style>
+</head>
+
+<body>
+  <div id="bg">
+    <css-doodle>
+      :doodle {
+      @grid: 3 / 100%,100%;
+      background:linear-gradient(rgba(0,90,167),rgba(255,253,228)) fixed;
+      }
+      @shape: pear;
+      background:linear-gradient(rgba(@rand(50,255),200, @rand(200,220)) 0%,white 100%);
+      @size: @rand(50,100)px;
+      position: absolute;
+      top: 100%;
+      left: @rand(0,100)%;
+      animation-name: ball;
+      animation-duration: 20s;
+      animation-iteration-count: 2;
+      animation-delay: @rand(0,20)s;
+
+      @keyframes ball {
+      0%{
+      top: 100%;
+      transform: rotate(-90deg);
+      }
+      100%{
+      top: -20%;
+      transform: rotate(-90deg);
+      }
+      }
+    </css-doodle>
+  </div>
+  <div id="main">
+    <div id="title">私たちの旅行　ー　台東区</div>
+    <div id="left">
+      <div id="map"><img src="images/taiwan.png" /></div>
+      <div id="all"><img src="images/all0.png" /></div>
+      <div id="k"><img src="images/kao.png" /></div>
+      <div id="p"><img src="images/pingtung.png" /></div>
+      <div id="t"><img src="images/tai.png" /></a></div>
+      <div id="picture">
+        <table width="100%" height="100%">
+          <tr>
+            <td width="1"><p><a href="#">タカオ</a></p></td>
+            <td width="60%"></td>
+          </tr>
+          <tr>
+            <td width="1" style="text-align:center"><p><a href="#">タイトン</a></p></td>
+            <td width="1"></td>
+          </tr>
+          <tr>
+            <td width="1"><p><a href="#">へいとう</a></p></td>
+            <td width="1"></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <div id="right"> 
+       <table width="100%" height="100%">
+         <tr>
+           <td>高雄出発時間</br>
+          朝 05:00
+          </td>
+           <td>屏東出発時間</br>
+          朝 05:00
+           </td>
+         </tr>
+          <tr>
+              <td colspan="2">第一回　休憩所
+              </br>
+                  7-ELEVEN 維軒門市</br>
+                  屏東縣枋寮鄉中山路二段143號</br>
+              </td>
+            </tr>
+          <tr>
+              <td colspan="2">ホテルー旭緣咖啡</br>
+                  電話 : 0910-556349</br>
+                  アドレス: 台東市永安街18巷31弄1號</br>
+                  ウエベ：http://www.tw5168.com.tw/hotelsite/index.php?uid=224</br>
+
+              </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                  
+                </td>
+              </tr>
+       </table>
+ 
+    </div>
+    <div id="moto"><img width="250px"src="images/2.png"/></div>
+  </div>
+  <script src="./css-doodle.min.js"></script>
+</body>
+
+</html>
